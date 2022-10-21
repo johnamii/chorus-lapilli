@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+This is a web-based game of terni lapilli, an old Roman game quite similar to tic-tac-toe. For my assignment, chorus lapilli, I have
+derived the tic-tac-toe implementation from a React tutorial (https://reactjs.org/tutorial/tutorial.html), then modified it visually
+and functionally to replicate terni lapilli. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The goal is to place pieces on the board and align them in a sequence of three before your opponent: vertically, horizontally, or diagonally.
 
-## Available Scripts
+The difference is that, in contrast to tic-tac-toe, once each player has 3 pieces on the board, they cannot place any more; rather, they must
+move their pieces into open spaces with hopes of maneuvering into a winning sequence.
 
-In the project directory, you can run:
+There is one extra rule: if a players piece occupies the center space, their next move MUST result in a winning sequence or vacate the center
+space.
 
-### `npm start`
+Note: instead of a grid of 9 squares, I decided to implement a circular board with a different design, based on images of old boards used by the
+Romans. The game plays identically, just is visaully different.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Controls:
+    -For the first 6 turns, the user may select an empty space to place a 'pebble'.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    -The box below the board will indicate which color has the next move.
 
-### `npm test`
+    -Once 6 pieces are on the board, the user should click one of the available pieces to select it.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    -Then, the user may click one of the highlighted spaces to move their piece there, iff it does not violate the rules of the center space.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    -The user may also scroll and click in the box below, which maps to a list of previous versions of the board. This allows the user to
+     step revert to an earlier move, to redo previous decisions.

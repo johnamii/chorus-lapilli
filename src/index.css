@@ -1,13 +1,119 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+    margin: 0;
+}   
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+   .pebble{
+        border: 2px groove gray;
+        width: 5vh;
+        height: 5vh;
+        border-radius: 3vh;
+        opacity: 100%;
+    }
+
+    .inner-slot{
+        color: white;
+        
+        height: 100%;
+        width: 100%;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .slot{
+        width: 10vh;
+        height: 10vh;
+        border-radius: 10vh;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .line{
+        width: 50vh;
+        height: 2px;
+        background-color: #BC0433;
+    }
+
+    .board{
+        background-color: #AED1F1;
+        border: 4px solid black;
+        width: 50vh;
+        height: 50vh;
+        border-radius: 50vh;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        top: 22%;
+
+        position:absolute;
+    }
+
+    .stepback-button{
+        background: white;
+        border: 2px groove black;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+
+    .game-moves{
+        border: 1px solid black;
+        height: 85%;
+        overflow-y:auto;
+        overflow-x: hidden;
+    }
+
+    .game-info{
+        width: 30%;
+        height:20%;
+        position: absolute;
+        top: 78%;
+    }
+
+    .game-commentary{
+        height: 5vh;
+        width: 100%;
+        
+        color: black;
+ 
+        position: absolute;
+        top: 12%;
+        text-align: center;
+        border-radius: 3mm;
+        font-size: x-large;
+    }
+
+    .game-announcements{
+        background-color: #071013;
+        color: white;
+        text-align: center;
+        height: 15%;
+        font-size: large;
+    }
+
+    .header{
+        height: 10vh;
+        width: 98vw;
+        border-radius: 1mm;
+        background-color: #071013;
+        top: 1vh;
+        position: absolute;
+
+        text-align: center;
+        color: white;
+        font-size: 200%;
+    }
+
+    .game{
+        background-color: #F7EDFA;
+        width: 98vw;
+        height: 100vh;
+        border-radius: 1mm;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
