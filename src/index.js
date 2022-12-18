@@ -19,9 +19,6 @@ const Pebble = (props) => {
 }
 
 const Slot = (props) => {
-
-    // SELECTED: SECOND TERNARY FOR AVAILABLE
-
     return (
         <button 
             className='inner-slot' 
@@ -88,7 +85,7 @@ class Game extends React.Component{
 
         this.state = {
             history: [{
-                squares: Array(9).fill(null)
+                squares: Array(9).fill(null),
             }],
             stepNumber: 0,
             lightIsNext: true,
@@ -97,6 +94,7 @@ class Game extends React.Component{
             commentary: "The game begins!",
             centerAlert: false,
             winner: null,
+            infoVisible: false
         }
     }
 
@@ -226,7 +224,7 @@ class Game extends React.Component{
 
         return(
             <div className='game'>
-                <div className='header'> Terni Lapilli </div>
+                <div className='header'> <h1>Terni Lapilli</h1> </div>
                 <div className='game-commentary'> {this.state.commentary}</div>
                 <Board 
                     slots={current.squares} 
@@ -243,6 +241,28 @@ class Game extends React.Component{
                         <ol className='step-list'>{moves}</ol>
                     </div>
                 </div>
+
+                <button 
+                  className='info-button'
+                  onClick={(prevState) => this.setState({infoVisible: !this.state.infoVisible})}
+                >
+                        Info
+                </button>
+                { this.state.infoVisible && 
+                <div className='info-div'>
+                    <p className='info-text'>
+                        Terni Lapilli is an old Roman pebble game played very similarly to tic-tac-toe.
+                        The rules are simple:
+                            <li>Each player may only place 3 tiles.</li>
+                            <li>Instead of placing a 4th tile, they must reposition a current one.</li>
+                            <li>If a tile occupies the center space, its next move must either:</li>
+                            <dd>Vacate the space</dd>
+                            <dd>Result in victory</dd>
+                            <li>A player wins when they can align 3 tiles in a row</li>
+                        
+                    </p>
+                </div> 
+                }
             </div>
         )
     }

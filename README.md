@@ -1,3 +1,5 @@
+Deployed at terni.johnamii.com
+
 This is a web-based game of terni lapilli, an old Roman game quite similar to tic-tac-toe. For my assignment, chorus lapilli, I have
 derived the tic-tac-toe implementation from a React tutorial (https://reactjs.org/tutorial/tutorial.html), then modified it visually
 and functionally to replicate terni lapilli. 
